@@ -3,9 +3,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Send, Users } from "lucide-react";
-import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
+import { Send } from "lucide-react";
+import { useState, useRef, useEffect} from "react";
 import OpenMenu from "./_components/openMenu";
+import { useParams } from "next/navigation";
 
 interface Message {
   id: string;
@@ -14,11 +15,8 @@ interface Message {
   timestamp: string;
 }
 
-export default function ChatPage({
-  params
-}: {
-    params: {id : string}
-}) {
+export default function ChatPage() {
+  const params = useParams()
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
