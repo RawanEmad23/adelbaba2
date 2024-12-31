@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { PenLine, Plus } from "lucide-react";
 import React from "react";
 const folders = [
-  { icon: "📥", label: "Inbox", count: 1253 },
+  { icon: "📥", label: "Inbox1", count: 1253 },
   { icon: "⭐", label: "Starred", count: 245 },
   { icon: "📤", label: "Sent", count: 24532 },
   { icon: "📝", label: "Draft", count: 9 },
